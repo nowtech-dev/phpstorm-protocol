@@ -9,7 +9,7 @@ import dev.nowtech.phpstorm.protocol.settings.ProtocolSettings
 
 object ProtocolService {
 
-  const val NOTIFICATION_GROUP = "PhpStorm Protocol"
+  const val NOTIFICATION_GROUP = "Php Protocol"
 
   fun installWithNotification(project: Project? = null, showSuccess: Boolean = true) {
     ApplicationManager.getApplication().executeOnPooledThread {
@@ -20,7 +20,7 @@ object ProtocolService {
           onSuccess = { summary ->
             settings.getState().registryRevision = WindowsProtocolRegistrar.REGISTRY_REVISION
             settings.getState().lastError = ""
-            protocolLog.info("PhpStorm Protocol: install ok")
+            protocolLog.info("Php Protocol: install ok")
             if (showSuccess) {
               notify("Protocol handlers registered", summary, NotificationType.INFORMATION)
             }
@@ -28,7 +28,7 @@ object ProtocolService {
           onFailure = { err ->
             val msg = err.message ?: err.toString()
             settings.getState().lastError = msg
-            protocolLog.warn("PhpStorm Protocol: install failed", err)
+            protocolLog.warn("Php Protocol: install failed", err)
             notify("Protocol handler registration failed", msg, NotificationType.ERROR)
           },
         )

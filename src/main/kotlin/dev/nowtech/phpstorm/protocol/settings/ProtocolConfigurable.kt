@@ -14,7 +14,7 @@ class ProtocolConfigurable : Configurable {
   private var autoRegisterBox: JBCheckBox? = null
   private var statusLabel: JBLabel? = null
 
-  override fun getDisplayName(): String = "PhpStorm Protocol"
+  override fun getDisplayName(): String = "Php Protocol"
 
   override fun createComponent(): JComponent {
     val settings = ProtocolSettings.getInstance()

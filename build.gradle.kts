@@ -30,8 +30,8 @@ dependencies {
 
 intellijPlatform {
   pluginConfiguration {
-    id = "dev.nowtech.phpstorm.protocol"
-    name = "PhpStorm Protocol"
+    id = "dev.nowtech.php.protocol"
+    name = "Php Protocol"
     version = project.version.toString()
     ideaVersion {
       sinceBuild = "262.10968"
@@ -39,7 +39,7 @@ intellijPlatform {
     }
     vendor {
       name = "NOW Tech"
-      url = "https://jetbrains.nowtech.dev"
+      url = "https://phpstorm.nowtech.dev"
     }
   }
 }

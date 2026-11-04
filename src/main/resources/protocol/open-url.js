@@ -1,9 +1,9 @@
-// revision: 7
+// revision: 9
 var url = WScript.Arguments(0);
 
 function fail(message) {
   var shell = new ActiveXObject('WScript.Shell');
-  shell.Popup(message, 0, 'PhpStorm Protocol', 16);
+  shell.Popup(message, 0, 'Php Protocol', 16);
   WScript.Quit(1);
 }
 
@@ -90,7 +90,7 @@ var statePath =
 
 if (!fso.FileExists(statePath)) {
   fail(
-    'Protocol state not found.\nOpen a project in PhpStorm with the PhpStorm Protocol plugin, then try again.\n' +
+    'Protocol state not found.\nOpen a project in the IDE with the Php Protocol plugin, then try again.\n' +
       statePath
   );
 }

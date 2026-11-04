@@ -15,7 +15,7 @@ class ProtocolStartupActivity : StartupActivity {
       }
       InstallGate.done = true
     }
-    protocolLog.info("PhpStorm Protocol: scheduling handler registration")
+    protocolLog.info("Php Protocol: scheduling handler registration")
     ProtocolService.installWithNotification(project, showSuccess = false)
   }
 

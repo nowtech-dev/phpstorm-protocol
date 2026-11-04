@@ -15,7 +15,7 @@ class ProtocolProjectActivity : ProjectActivity {
         ProtocolHandlerDeployer.deployIfNeeded()
         ProtocolStateStore.registerCurrentIde(basePath)
       }.onFailure { e ->
-        protocolLog.warn("PhpStorm Protocol: project registration failed for \"$basePath\"", e)
+        protocolLog.warn("Php Protocol: project registration failed for \"$basePath\"", e)
       }
     }
   }

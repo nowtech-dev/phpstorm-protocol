@@ -66,7 +66,7 @@ object ProtocolStateStore {
             productCode = launcher.productCode,
             registeredAt = java.time.Instant.now().toString(),
           )
-        protocolLog.info("PhpStorm Protocol: registered project \"$normalized\" -> ${launcher.build}")
+        protocolLog.info("Php Protocol: registered project \"$normalized\" -> ${launcher.build}")
       }
     }
     save(state)

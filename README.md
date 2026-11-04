@@ -1,7 +1,7 @@
-# PhpStorm Protocol
+# Php Protocol
 
 <p align="center">
-  <img src="docs/icon.png" width="160" alt="PhpStorm Protocol plugin icon"/>
+  <img src="docs/icon.png" width="160" alt="Php Protocol plugin icon"/>
 </p>
 
 JetBrains IDE plugin that registers **`phpstorm://`** and **`idea://`** URL handlers on **Windows**, so links such as:
@@ -10,10 +10,10 @@ JetBrains IDE plugin that registers **`phpstorm://`** and **`idea://`** URL hand
 phpstorm://open?url=file://%f&line=%l
 ```
 
-open the file in the **PhpStorm build that owns the project** (nearest `.idea` directory), not a random Toolbox default.
+open the file in the **IDE build that owns the project** (nearest `.idea` directory), not a random Toolbox default.
 
-**Plugin ID:** `dev.nowtech.phpstorm.protocol`  
-**Vendor:** [NOW Tech](https://jetbrains.nowtech.dev)
+**Plugin ID:** `dev.nowtech.php.protocol`  
+**Vendor:** [NOW Tech](https://phpstorm.nowtech.dev)
 
 ## Requirements
 
@@ -35,7 +35,7 @@ Also supports `phpstorm://open?file=%f&line=%l`.
 
 ## Settings
 
-- **Settings → Tools → PhpStorm Protocol** — auto-register on startup, manual register, last error
+- **Settings → Tools → Php Protocol** — auto-register on startup, manual register, last error
 - **Tools → Register phpstorm:// and idea:// handlers…**
 
 ## Build
@@ -50,6 +50,12 @@ Output: `build/distributions/phpstorm-protocol-*.zip`
 
 ## Install
 
+### JetBrains Marketplace
+
+[![Install to JetBrains IDE(s)](https://img.shields.io/badge/JetBrains_Marketplace-Install-000000?style=for-the-badge&logo=jetbrains)](https://plugins.jetbrains.com/plugin/35809-php-protocol)
+
+### Install from disk (development build)
+
 **Settings → Plugins → Install Plugin from Disk…** → ZIP → restart IDE.
 
 Open a project once so the plugin can write the project mapping, then test a link from the browser.
@@ -59,12 +65,12 @@ Open a project once so the plugin can write the project mapping, then test a lin
 IDE log:
 
 ```text
-PhpStorm Protocol: scheduling handler registration
-PhpStorm Protocol: install ok
-PhpStorm Protocol: registered project "C:\path\to\project" -> PS-262.xxxxx
+Php Protocol: scheduling handler registration
+Php Protocol: install ok
+Php Protocol: registered project "C:\path\to\project" -> PS-262.xxxxx
 ```
 
-Logger: `dev.nowtech.phpstorm.protocol`
+Logger: `dev.nowtech.php.protocol`
 
 Registry (PowerShell):
 
@@ -78,4 +84,4 @@ Automatic registration is **not** implemented yet. Recent JetBrains builds may s
 
 ## License
 
-MIT © [NOW Tech](https://jetbrains.nowtech.dev)
+MIT © [NOW Tech](https://phpstorm.nowtech.dev)
