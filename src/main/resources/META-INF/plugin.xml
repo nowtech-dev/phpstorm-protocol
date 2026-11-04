@@ -1,0 +1,38 @@
+<idea-plugin>
+  <id>dev.nowtech.phpstorm.protocol</id>
+  <name>PhpStorm Protocol</name>
+  <vendor url="https://jetbrains.nowtech.dev">NOW Tech</vendor>
+  <description><![CDATA[
+    Registers <code>phpstorm://</code> and <code>idea://</code> URL handlers on Windows so links such as
+    <code>phpstorm://open?url=file://%f&amp;line=%l</code> open the file in the IDE instance that owns the project
+    (nearest <code>.idea</code> folder).<br/><br/>
+    <a href="https://jetbrains.nowtech.dev"><font color="#589DF6">jetbrains.nowtech.dev</font></a>
+  ]]></description>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <postStartupActivity implementation="dev.nowtech.phpstorm.protocol.ProtocolStartupActivity"/>
+    <projectActivity implementation="dev.nowtech.phpstorm.protocol.ProtocolProjectActivity"/>
+    <applicationConfigurable
+        parentId="tools"
+        instance="dev.nowtech.phpstorm.protocol.settings.ProtocolConfigurable"
+        id="dev.nowtech.phpstorm.protocol.settings"
+        displayName="PhpStorm Protocol"/>
+    <applicationService
+        serviceImplementation="dev.nowtech.phpstorm.protocol.settings.ProtocolSettings"/>
+    <notificationGroup id="PhpStorm Protocol" displayType="BALLOON"/>
+  </extensions>
+
+  <actions>
+    <action
+        id="dev.nowtech.phpstorm.protocol.Register"
+        class="dev.nowtech.phpstorm.protocol.RegisterProtocolAction"
+        text="Register phpstorm:// and idea:// handlers…"
+        description="Install or repair Windows URL protocol handlers"/>
+    <group id="dev.nowtech.phpstorm.protocol.ToolsGroup">
+      <reference ref="dev.nowtech.phpstorm.protocol.Register"/>
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </group>
+  </actions>
+</idea-plugin>

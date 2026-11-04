@@ -1,0 +1,23 @@
+# Gradle
+.gradle/
+build/
+.kotlin/
+.intellijPlatform/
+
+gradle.properties
+
+# IDE
+.idea/
+*.iml
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+*.log
+
+# Local protocol test page (paths are machine-specific)
+demo.html
+
+.venv-icon/
