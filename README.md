@@ -82,6 +82,10 @@ Get-ItemProperty 'HKCU:\Software\Classes\phpstorm\shell\open\command'
 
 Automatic registration is **not** implemented yet. Recent JetBrains builds may ship their own handlers; otherwise use the standalone installers linked above.
 
+## Support
+
+If this plugin saves you time, consider a [donation](https://donate.stripe.com/test_dRm8wObyog0J83pgdZcjS00).
+
 ## License
 
 MIT © [NOW Tech](https://phpstorm.nowtech.dev)
